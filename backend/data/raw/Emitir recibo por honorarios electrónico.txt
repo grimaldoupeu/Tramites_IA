@@ -1,31 +1,35 @@
-Emitir recibo por honorarios electrónico   
+# Emitir recibo por honorarios electrónico
 
-Si eres un trabajador independiente, debes emitir tus recibos por honorarios electrónicos cuando alguien pague por tus servicios profesionales.   
+Si eres un trabajador independiente, debes emitir tus recibos por honorarios electrónicos cuando alguien pague por tus servicios profesionales.
 
-Si por motivos no previstos (causas que no son de tu responsabilidad) tienes que emitir recibos por honorarios en formatos impresos (por imprenta autorizada ), no olvides registrarlos con tu Clave SOL .   
+Si por motivos no previstos (causas que no son de tu responsabilidad) tienes que emitir recibos por honorarios en formatos impresos (por imprenta autorizada), no olvides registrarlos con tu Clave SOL.
 
-Recuerda que desde el 1 de abril del 2017 los trabajadores independientes emiten solo Recibos por Honorarios (RHE) de forma electrónica.   
+Recuerda que desde el 1 de abril del 2017 los trabajadores independientes emiten solo Recibos por Honorarios (RHE) de forma electrónica.
 
-Consideraciones:   
+## Consideraciones:
 
-Ten en cuenta, que debes indicar al momento de emitir tu recibo por honorarios electrónico, si el pago es al contado o al crédito, identificando lo siguiente:   
+Ten en cuenta, que debes indicar al momento de emitir tu recibo por honorarios electrónico, si el pago es al contado o al crédito, identificando lo siguiente:
 
-Si emites tu recibo por honorarios electrónico y es pagado en el momento, se deberá indicar como forma de pago “contado”.   
+- Si emites tu recibo por honorarios electrónico y es pagado en el momento, se deberá indicar como forma de pago “contado”.
 
-Si emites tu recibo por honorarios electrónico y no es pagado en el momento, se deberá indicar el monto de los honorarios pendientes de pago, la(s) fecha(s) de vencimiento de los montos correspondientes a cada cuota y como forma de pago “crédito”.   
+- Si emites tu recibo por honorarios electrónico y no es pagado en el momento, se deberá indicar el monto de los honorarios pendientes de pago, la(s) fecha(s) de vencimiento de los montos correspondientes a cada cuota y como forma de pago “crédito”.
 
-En caso la forma de pago sea al “crédito”, se puede modificar las cuotas pendientes de pago y las fechas correspondientes a su vencimiento, en un plazo de10 días hábiles del mes siguiente de emitido.   
+- En caso la forma de pago sea al “crédito”, se puede modificar las cuotas pendientes de pago y las fechas correspondientes a su vencimiento, en un plazo de10 días hábiles del mes siguiente de emitido.
 
-Si el servicio se presta a título gratuito, al culminar, debes emitir el recibo por honorarios electrónico.   
+- Si el servicio se presta a título gratuito, al culminar, debes emitir el recibo por honorarios electrónico.
 
-Requisitos   
+## Requisitos
 
-Haber registrado en tu RUC rentas de cuarta categoría .   
+- Haber registrado en tu RUC rentas de cuarta categoría.
 
-Clave SOL .
+- Clave SOL.
 
-Antes de iniciar, debes saber:
+## Modalidad: Online
 
-Al ingresar a SUNAT Operaciones en Línea con tu clave SOL, completa los datos y emite el recibo por honorarios electrónico.   
+## Antes de iniciar, debes saber:
+
+Al ingresar a SUNAT Operaciones en Línea con tu clave SOL, completa los datos y emite el recibo por honorarios electrónico.
+
+Emite recibo por honorarios electrónico
 
 Puedes descargar el recibo emitido en formato XML, PDF o enviarlo directamente a tu correo electrónico.

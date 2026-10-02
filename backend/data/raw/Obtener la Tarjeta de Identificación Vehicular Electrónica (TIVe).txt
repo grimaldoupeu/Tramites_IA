@@ -1,0 +1,27 @@
+# Obtener la Tarjeta de Identificación Vehicular Electrónica (TIVe)
+
+La Tarjeta de Identificación Vehicular Electrónica (TIVe) es el documento que identifica al vehículo, a través de la indicación de todas las características y especificaciones técnicas inscritas sin precisar los datos del propietario.
+
+Debes obtener o actualizar la nueva TIVe cuando:
+
+- Cuando compras un auto nuevo (inmatriculación).
+
+- Cuando realices un trámite registral de un vehículo con placa antigua por haberse registrado antes del 1 de enero de 2010 (reemplacamiento).
+
+- Cuando modifiques las características del vehículo referidas al color, motor, tipo de combustible, etc (cambio de características).
+
+- Cuando solicites el cambio voluntario a la TIVe porque tienes la antigua tarjeta de identificación vehicular (cambio voluntario).
+
+- Cuando se te pierde o deteriora la tarjeta en soporte físico (duplicado).
+
+## Modalidad: Online
+
+## Antes de inicias, debes saber:
+
+Si has realizado alguno de los trámites indicados previamente, y este se encuentra inscrito, vas a poder descargar la Tarjeta de Identificación Vehicular Electrónica (TIVe) ingresando a la página web Síguelo.
+
+Al ingresar deberás colocar el número y año de título, así como la oficina registral donde está inscrito su vehículo (estos datos figuran en la solicitud de inscripción de título). Como resultado aparecerá un mensaje de Inscrito, al lado derecho inferior figurará ver anotación y TIVE (letras turquesas). En esta sección ingresa ahí el número de placa y código de verificación (estos datos figuran en la parte superior de la solicitud antes indicada) para descargar la tarjeta electrónica.
+
+Descarga tu tarjeta
+
+- Cuando se te pierde, roban o deteriora la tarjeta en soporte físico solicita como duplicado de acuerdo a los pasos señalados para duplicado de tarjeta.

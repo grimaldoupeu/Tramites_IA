@@ -1,0 +1,31 @@
+# Consultar estado de tu trámite para la entrega de tu DNI
+
+Si necesitas consultar el estado del trámite de tu Documento Nacional de Identidad Electrónico (DNIe) de menor o adulto en cualquier momento del día, incluso hasta 1 mes después de que recibiste el documento, puedes hacerlo de manera online.
+
+El sistema te mostrará los diferentes estados en el que se encuentra tu trámite:
+
+- Iniciado: Trámite ingresado
+
+- En proceso: Muestra el estado dividido en etapas del 1 al 6
+
+- En agencia: Al 100% de proceso, el DNI ya se encuentra en Centro de Atención del RENIEC
+
+- Entregado: Ya recogiste tu DNI
+
+- Observado/Anulado: Cuando el trámite ha sido observado, te invitamos a contactarnos a través de nuestra asistente virtual por WhatsApp: al número 990182569. También, puedes comunicarte al teléfono (01) 315-2700 o al (01) 315-4000, anexo 1900.
+
+A partir de ahora, el RENIEC solo emitirá el DNI electrónico. Aprovecha el costo por campaña para primer DNI electrónico hasta el 31 de diciembre de 2026.
+
+## Requisitos
+
+- Conocer el número de DNI o número de solicitud.
+
+## Modalidad: Online
+
+## Antes de iniciar, debes saber:
+
+Al ingresar a la plataforma deberás elegir si deseas obtener la información colocando el número del DNI o número de solicitud.
+
+Coloca el número que corresponde y haz clic en Consultar.
+
+Consulta el estado del trámite

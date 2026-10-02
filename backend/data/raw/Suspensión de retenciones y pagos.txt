@@ -1,13 +1,13 @@
-Suspensión de retenciones y pagos a cuenta de renta de cuarta categoría   
+# Suspensión de retenciones y pagos a cuenta de renta de cuarta categoría
 
-Si eres un trabajador independiente que genera rentas de cuarta categoría (emite recibos por honorarios), bajo ciertas condiciones, puedes evitar la retención del 8% del impuesto a la renta para montos mayores a S/ 1,500.00 , solicitando la suspensión de retenciones y pagos a cuenta de renta de cuarta categoría, desde el 1 de enero de cada año.   
+Si eres un trabajador independiente que genera rentas de cuarta categoría (emite recibos por honorarios), bajo ciertas condiciones, puedes evitar la retención del 8% del impuesto a la renta para montos mayores a S/ 1,500.00, solicitando la suspensión de retenciones y pagos a cuenta de renta de cuarta categoría, desde el 1 de enero de cada año.
 
-Condiciones para el año 2026:   
+## Condiciones para el año 2026:
 
-Tus ingresos no superan los S/ S/ 4,010.00 al mes y S/ 48,125.00 al año.   
+- Tus ingresos no superan los S/ S/ 4,010.00 al mes y S/ 48,125.00 al año.
 
-Obtienes tus ingresos por funciones de director de empresas, síndico, mandatario o similares, y no superas los S/ 3,208.00 al mes, o S/ 38,500.00 anuales.   
+- Obtienes tus ingresos por funciones de director de empresas, síndico, mandatario o similares, y no superas los S/ 3,208.00 al mes, o S/ 38,500.00 anuales.
 
-Si superas esos importes, debes reiniciar las retenciones o pagos a cuenta .   
+Si superas esos importes, debes reiniciar las retenciones o pagos a cuenta.
 
 Toma en cuenta que si no cumples estas condiciones, debes presentar la declaración mensual y pagar el 8%. Este importe se conoce como pago a cuenta. Para calcularlo, debes sumar tus ingresos de cuarta y quinta categoría: trabajo independiente y dependiente, respectivamente.

@@ -1,0 +1,23 @@
+# Consultar los datos de una propiedad - Consulta de Propiedad
+
+Si deseas obtener información sobre el número de la partida registral de tu predio inscrito, así como el nombre de la oficina y zona registral de la Sunarp en la que se encuentra dicha partida, puedes hacerlo de forma gratuita y desde cualquier lugar con conexión a Internet con esta herramienta.
+
+## Requisitos
+
+- Número de DNI o carnet de extranjería.
+
+- Fecha de emisión del DNI.
+
+## Modalidad: Online
+
+## Antes de iniciar, debes saber:
+
+Para realizar la consulta debes colocar tu número de DNI o carnet de extranjería y la fecha de emisión de tu DNI. Además deberás dar clic en el código captcha.
+
+Si el nombre del titular que consta en la partida registral del predio no coincide exactamente con el que consta en el DNI o carnet de extranjería, la búsqueda no reportará ningún número de partida registral. En ese caso, se sugiere revisar la respectiva partida a través del Servicio de Publicidad Registral en Línea (SPRL) y, de corresponder, solicitar la rectificación del nombre.
+
+Ingresa a Consulta de Propiedad
+
+- El número de documento y su fecha de emisión permiten al sistema determinar la identidad del solicitante del servicio.
+
+- La búsqueda de las partidas a nombre del propietario se realiza en función a sus nombres y apellidos, y no al número de su DNI o carnet de extranjería. Por ello, los resultados pueden contener casos de homonimia.

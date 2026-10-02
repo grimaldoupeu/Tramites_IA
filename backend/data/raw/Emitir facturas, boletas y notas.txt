@@ -1,24 +1,29 @@
-Emitir facturas, boletas y notas de crédito electrónicas
+# Emitir facturas, boletas y notas de crédito electrónicas
 
-Si eres una persona natural con negocio o una persona jurídica, puedes acceder al Sistema de Operaciones en Línea - SOL para realizar las siguientes acciones:   
+Si eres una persona natural con negocio o una persona jurídica, puedes acceder al Sistema de Operaciones en Línea - SOL para realizar las siguientes acciones:
 
-Emitir facturas.   
+- Emitir facturas.
 
-Emitir boletas de venta.   
+- Emitir boletas de venta.
 
-Emitir notas crédito de factura electrónica (FE).   
+- Emitir notas crédito de factura electrónica (FE).
 
-Emitir notas de débito de FE.   
+- Emitir notas de débito de FE.
 
-Emitir notas crédito de boleta de venta electrónica (BVE).   
+- Emitir notas crédito de boleta de venta electrónica (BVE).
 
-Emitir notas de débito de BVE.   
+- Emitir notas de débito de BVE.
 
-Además, puedes revisar el catálogo de productos para identificar tus facturas por código y descripción, y consultar todos los tipos de comprobantes que emitiste y recibiste.   
+Además, puedes revisar el catálogo de productos para identificar tus facturas por código y descripción, y consultar todos los tipos de comprobantes que emitiste y recibiste.
 
-Requisitos   
+## Requisitos
 
-RUC y clave SOL.   
+- RUC y clave SOL.
 
-Antes de iniciar, debes saber:
+## Modalidad: Online
+
+## Antes de iniciar, debes saber:
+
 Cuando ingreses, selecciona la opción que quieres realizar en el menú. El sistema te pedirá que ingreses tu RUC y clave SOL para emitir tus documentos o consultar tus facturas o productos.
+
+Emitir documentos

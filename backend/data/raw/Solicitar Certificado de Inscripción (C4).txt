@@ -1,0 +1,63 @@
+# Solicitar Certificado de Inscripción (C4)
+
+## Descripción
+
+Puedes solicitar el Certificado de Inscripción (C4), que contiene información básica de tu DNI. Este certificado es solo informativo, no reemplaza al DNI.
+
+El C4 no contiene la fecha de emisión del DNI, ya que este es un dato que se usa como medida de seguridad para comprobar tu identidad en formularios de algunos servicios digitales. Esta información tampoco se muestra en otras apps del Reniec.
+
+Ten en cuenta que para solicitar el C4 online, es personal y solo para mayores de 18 años. El trámite para solicitar el certificado de inscripción C4 solo puede ser realizado por el titular
+
+Si necesitas el C4 de un menor de edad, ten en cuenta que el trámite es presencial y requiere la asistencia obligatoria del menor. Pueden solicitarlo:
+
+- Los padres o el representante legal debidamente acreditado (quien ejerza la tenencia o representación legal del menor).
+
+- El declarante del último trámite de DNI del menor, previa autorización excepcional del encargado o supervisor del centro de atención de RENIEC.
+
+- El menor de edad que sea padre o madre (respecto al C4 de su hijo) o que sea titular en un acta de matrimonio.
+
+## Requisitos
+
+- Número de DNI.
+
+- Si haces el procedimiento online, debes contar con correo electrónico y tener una impresora conectada a la PC o laptop.
+
+- Descarga la App ID PERÚ para verificar tu identidad.
+
+## Modalidad: Online
+
+## Puedes ingresar tu solicitud online
+
+Antes de iniciar, debes saber:
+
+- Cancela S/ 4.50 por derecho de trámite en Yape, agencia o agente del Banco de la Nación o pagalo.pe usando el código de tributo 02143
+
+Solicita el C4 online
+
+## También puedes hacerlo presencialmente:
+
+## Modalidad: Presencial
+
+## Hazlo en 3 pasos:
+
+- Yape – Agente BCP
+
+- Genera tu ticket en https://recaudacion.reniec.gob.pe/recaudacionTasas/
+
+- Selecciona el código de tributo 02143.
+
+- Luego ingresa a la aplicación Yape > Pago de servicios > Reniec, coloca tu número de ticket y haz el pago de S/ 4.50
+
+También puedes acercarte con ese ticket y pagar desde el agente BCP más cercano.
+
+Conoce sobre los 14 trámites que puedes pagar a través de la ticketera (sección informativa).
+
+Banco de la Nación – Agencia, agente o Pagalo.pe Ingresa a Pagalo.pe, o acércate a la agencia o agente del Banco de la Nación más cercano y haz el pago de S/ 4.50 por derecho de trámite, usando el código de tributo 02143. Conserva el comprobante de pago.
+
+Para ambas modalidades, guarda tu comprobante y/o captura de pantalla.
+
+Acércate a un Centro de Atención del Reniec o al Centro MAC más cercano, y bríndale al registrador tu número de DNI junto con el comprobante de pago.
+
+Inmediatamente, el registrador te entregará el Certificado de Inscripción que solicitaste.
+
+Para una atención más rápida y eficiente, te invitamos a contactarnos a través de nuestra asistente virtual por WhatsApp: al número 990182569. También, puedes comunicarte al teléfono (01) 315-2700 o al (01) 315-4000, anexo 1900.

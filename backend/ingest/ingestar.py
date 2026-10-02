@@ -19,7 +19,7 @@ from pathlib import Path
 
 from app.config import BACKEND_DIR
 from ingest.extraccion import EXTENSIONES_SOPORTADAS, extraer_texto
-from ingest.fragmentacion import fragmentar
+from ingest.fragmentacion import fragmentar_documento
 from rag.embeddings import embed_pasajes
 
 CARPETA_RAW = BACKEND_DIR / "data" / "raw"
@@ -67,7 +67,8 @@ def procesar_documento(documento: Path, dry_run: bool) -> int:
     if not texto:
         raise ValueError("el documento no tiene texto (¿PDF escaneado como imagen?)")
 
-    fragmentos = fragmentar(texto)
+    # Cada fragmento lleva al inicio el trámite y su sección (ver fragmentacion.py)
+    fragmentos = fragmentar_documento(texto, metadatos.tramite)
     embeddings = embed_pasajes(fragmentos)
 
     if dry_run:

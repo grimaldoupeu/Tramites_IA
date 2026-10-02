@@ -1,12 +1,19 @@
-Cerrar una empresa o negocio
+# Cerrar una empresa o negocio
 
-Descripción
-Si tu empresa no está dando los resultados esperados y quieres evitar que te pueda generar problemas a futuro, cerrar definitivamente tu empresa (extinción) puede ser la mejor solución. Al cerrar formalmente tu negocio, permitirás que las entidades supervisoras, autoridades y la sociedad en general sepan que ya no está en funcionamiento.   
+## Descripción
 
-Para cerrar una empresa, debes hacer lo siguiente:   
+Si tu empresa no está dando los resultados esperados y quieres evitar que te pueda generar problemas a futuro, cerrar definitivamente tu empresa (extinción) puede ser la mejor solución. Al cerrar formalmente tu negocio, permitirás que las entidades supervisoras, autoridades y la sociedad en general sepan que ya no está en funcionamiento.
 
-Inscribir la disolución y liquidación en la Sunarp. Para que una sociedad anónima deje de existir en Registros Públicos, debe primero realizar esta inscripción.   
+## Para cerrar una empresa, debes hacer lo siguiente:
 
-Inscribir la extinción en la Sunarp. Al realizar la extinción de la sociedad y luego la baja de RUC de persona jurídica, la empresa dejará de existir como tal para la sociedad y las diferentes entidades reguladoras, como Sunat y Sunarp.   
+1. Inscribir la disolución y liquidación en la Sunarp.
 
-Dar de baja al RUC de persona jurídica en la Sunat. Con esto, la empresa dejará de estar inscrita como contribuyente en la Sunat, esto evita que se sigan generando nuevas obligaciones tributarias para tu empresa.
+Para que una sociedad anónima deje de existir en Registros Públicos, debe primero realizar esta inscripción.
+
+2. Inscribir la extinción en la Sunarp
+
+Al realizar la extinción de la sociedad y luego la baja de RUC de persona jurídica, la empresa dejará de existir como tal para la sociedad y las diferentes entidades reguladoras, como Sunat y Sunarp.
+
+3. Dar de baja al RUC de persona jurídica en la Sunat
+
+Con esto, la empresa dejará de estar inscrita como contribuyente en la Sunat, esto evita que se sigan generando nuevas obligaciones tributarias para tu empresa.

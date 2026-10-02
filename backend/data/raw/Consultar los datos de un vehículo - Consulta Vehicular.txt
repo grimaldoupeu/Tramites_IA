@@ -1,0 +1,41 @@
+# Consultar los datos de un vehículo - Consulta Vehicular
+
+Accede de forma gratuita a los datos de los vehículos registrados a nivel nacional, así como los nombres de la o las personas titulares del vehículo.
+
+Este servicio facilita el desarrollo de las operaciones de transferencia de vehículos, y ayuda a contrarrestar los actos ilícitos y delictivos que afectan la seguridad ciudadana y el patrimonio de los propietarios de los vehículos.
+
+Podrás obtener la siguiente información del vehículo:
+
+- Número de placa antigua y nueva.
+
+- Número de serie del vehículo.
+
+- Número VIN del vehículo.
+
+- Número de motor del vehículo.
+
+- Color del vehículo.
+
+- Marca del vehículo.
+
+- Modelo del vehículo.
+
+- Titular del vehículo.
+
+- Sede (oficina registral donde se encuentra inscrito el vehículo).
+
+- Estado (si está o no en circulación).
+
+- Anotación (aparece solo si el vehículo se encuentra con anotación de robo).
+
+Es recomendable consultar los datos del propietario de un vehículo si se va a realizar la compra de uno usado. Esto se da, sobre todo, cuando la nueva Tarjeta de Identificación Vehicular Electrónica (TIVe) no consigna el nombre del propietario.
+
+## Modalidad: Online
+
+## Antes de iniciar debes saber
+
+Es necesario contar con el número de placa del vehículo, una vez que ingreses la placa y el código captcha podrás acceder a la información del vehículo.
+
+Ingresa a Consulta Vehicular
+
+Este servicio no constituye publicidad registral ni informa respecto a los gravámenes que podría tener un vehículo, pues es de carácter referencial.

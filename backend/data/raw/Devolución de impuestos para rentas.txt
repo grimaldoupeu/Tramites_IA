@@ -1,30 +1,35 @@
-Devolución de impuestos para rentas de trabajo (cuarta y quinta categoría)
+# Devolución de impuestos para rentas de trabajo (cuarta y quinta categoría)
 
-Descripción
-Si eres un trabajador independiente o en planilla (es decir, generas renta de cuarta o quinta categoría ), y producto de la determinación anual del Impuesto a la Renta (IR) resulta un saldo a tu favor, puedes solicitar su devolución.   
+## Descripción
 
-Ten en cuenta que para el cálculo de tu renta anual debes incluir como gastos adicionales los siguientes:   
+Si eres un trabajador independiente o en planilla (es decir, generas renta de cuarta o quinta categoría), y producto de la determinación anual del Impuesto a la Renta (IR) resulta un saldo a tu favor, puedes solicitar su devolución.
 
-Consumo en restaurantes, bares y hoteles : puedes deducir el 15% de tus consumos hechos en bares, restaurantes y hoteles por los años 2023 - 2025. Para obtener este beneficio debes exigir una boleta de venta electrónica con tu número de DNI o RUC al negocio. Si la compra es mayor a S/ 2,000.00 o US$ 500.00 , deberá ser bancarizada.   
+Ten en cuenta que para el cálculo de tu renta anual debes incluir como gastos adicionales los siguientes:
 
-Gasto de alquileres : podrás deducir hasta el 30% del costo de tu alquiler, presentando a la SUNAT los recibos de arrendamiento o factura electrónica (dependiendo si el arrendador genera rentas de primera o de tercera categoría). Si la persona que te alquila la vivienda no te entrega este comprobante, deberás exigírselo. Recuerda que solo aplicará el 30% de la deducción para el titular del recibo.   
+- Consumo en restaurantes, bares y hoteles: puedes deducir el 15% de tus consumos hechos en bares, restaurantes y hoteles por los años 2023 - 2025. Para obtener este beneficio debes exigir una boleta de venta electrónica con tu número de DNI o RUC al negocio. Si la compra es mayor a S/ 2,000.00 o US$ 500.00, deberá ser bancarizada.
 
-Honorarios profesionales de médicos y odontólogos : podrás deducir el 30% del pago a médicos y odontólogos por el cuidado de tu salud, de tus hijos menores de 18 años, de hijos mayores de edad con discapacidad registrada en el CONADIS o tu cónyuge o concubina(o) en la parte no reembolsable por seguros.   
+- Gasto de alquileres: podrás deducir hasta el 30% del costo de tu alquiler, presentando a la SUNAT los recibos de arrendamiento o factura electrónica (dependiendo si el arrendador genera rentas de primera o de tercera categoría). Si la persona que te alquila la vivienda no te entrega este comprobante, deberás exigírselo. Recuerda que solo aplicará el 30% de la deducción para el titular del recibo.
 
-Servicios profesionales que generen rentas de cuarta categoría : puedes deducir el 30% de lo que le pagues durante el 2025 a cualquier persona natural que ejerza una profesión u oficio de manera independiente y emita recibo por honorario electrónico. Cuando el pago sea igual o mayor a S/ 2,000.00 o US$ 500.00 , el mismo deberá estar bancarizado.   
+- Honorarios profesionales de médicos y odontólogos: podrás deducir el 30% del pago a médicos y odontólogos por el cuidado de tu salud, de tus hijos menores de 18 años, de hijos mayores de edad con discapacidad registrada en el CONADIS o tu cónyuge o concubina(o) en la parte no reembolsable por seguros.
 
-Aportaciones a Essalud por contratar trabajadores del hogar : deberás probar este gasto con el formulario 1676 que la SUNAT entrega a los empleadores o el documento virtual que sustenta este pago.   
+- Servicios profesionales que generen rentas de cuarta categoría: puedes deducir el 30% de lo que le pagues durante el 2025 a cualquier persona natural que ejerza una profesión u oficio de manera independiente y emita recibo por honorario electrónico. Cuando el pago sea igual o mayor a S/ 2,000.00 o US$ 500.00, el mismo deberá estar bancarizado.
 
-Recuerda que si el monto a pagar por alguno de estos gastos es igual o mayor a S/ 2,000.00 o US$ 500.00 , deberás utilizar: tarjeta de crédito o débito, cheques, depósitos en cuenta, transferencia bancaria u otro medio de pago autorizado.   
+- Aportaciones a Essalud por contratar trabajadores del hogar: deberás probar este gasto con el formulario 1676 que la SUNAT entrega a los empleadores o el documento virtual que sustenta este pago.
 
-La suma total de gastos adicionales que deducirás (devolución) no debe exceder las 3 UIT S/ 16,500.00 para el 2025 y tendrás que considerar todos los realizados durante el año (del 01 de enero al 31 de diciembre), que serán incluidos en tu Declaración Anual del Impuesto a la Renta , que vence entre los meses de marzo y abril del año siguiente, de acuerdo al cronograma de vencimientos. Si deseas, puedes consultar tus gastos deducibles registrados.   
+Recuerda que si el monto a pagar por alguno de estos gastos es igual o mayor a S/ 2,000.00 o US$ 500.00, deberás utilizar: tarjeta de crédito o débito, cheques, depósitos en cuenta, transferencia bancaria u otro medio de pago autorizado.
 
-Hazlo de forma digital:
+La suma total de gastos adicionales que deducirás (devolución) no debe exceder las 3 UIT S/ 16,500.00 para el 2025 y tendrás que considerar todos los realizados durante el año (del 01 de enero al 31 de diciembre), que serán incluidos en tu Declaración Anual del Impuesto a la Renta, que vence entre los meses de marzo y abril del año siguiente, de acuerdo al cronograma de vencimientos. Si deseas, puedes consultar tus gastos deducibles registrados.
+
+## Modalidad: Online
+
+## Hazlo de forma digital:
+
 Existen dos tipos de devolución:
 
-Devolución de parte : podrás solicitarla inmediatamente después de presentar tu Declaración Anual, mediante el formulario virtual N° 1649 y podrás elegir una de las 3 formas de devolución: depósito en cuenta bancaria, orden de pago o cheque (montos a devolver mayores a 10 UIT´s).   
+- Devolución de parte: podrás solicitarla inmediatamente después de presentar tu Declaración Anual, mediante el formulario virtual N° 1649 y podrás elegir una de las 3 formas de devolución: depósito en cuenta bancaria, orden de pago o cheque (montos a devolver mayores a 10 UIT´s).
 
-Devolución de oficio : es cuando la Sunat determina automáticamente (considerando los gastos adicionales) que tienes un saldo a favor y hará el depósito directamente en la cuenta de ahorros que hayas registrado, sin que realices ninguna solicitud. Este tipo de devolución se aplica desde el año 2017 en adelante. Si no estás de acuerdo con el resultado o crees que te corresponde un monto mayor de devolución, puedes presentar tu declaración de impuestos y generar una solicitud.   
+- Devolución de oficio: es cuando la Sunat determina automáticamente (considerando los gastos adicionales) que tienes un saldo a favor y hará el depósito directamente en la cuenta de ahorros que hayas registrado, sin que realices ninguna solicitud. Este tipo de devolución se aplica desde el año 2017 en adelante. Si no estás de acuerdo con el resultado o crees que te corresponde un monto mayor de devolución, puedes presentar tu declaración de impuestos y generar una solicitud.
 
-Importante:
+Consulta tu devolución de oficio
+
 El miércoles 28 de febrero de 2018, entró en vigencia la Ley N° 30734, que establece el derecho de personas naturales a la devolución automática de los impuestos pagados o retenidos en exceso desde el ejercicio 2017 en adelante.
