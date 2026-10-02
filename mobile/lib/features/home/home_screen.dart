@@ -9,14 +9,36 @@ import '../chat/chat_controller.dart';
 import '../chat/chat_screen.dart';
 import '../chat/widgets/question_input_bar.dart';
 import 'tramites_rapidos.dart';
-import 'widgets/tramites_list.dart';
+import 'widgets/entity_jump_chips.dart';
+import 'widgets/entity_section.dart';
 
-/// Pantalla de inicio: saludo, lista de trámites y campo para preguntar.
-class HomeScreen extends StatelessWidget {
+/// Pantalla de inicio: saludo, trámites agrupados por entidad y campo para preguntar.
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, required this.controller, required this.tema});
 
   final ChatController controller;
   final ThemeController tema;
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  /// Una clave por sección, para que los chips puedan desplazarse hasta ella.
+  final _secciones = {for (final e in entidades) e.sigla: GlobalKey()};
+
+  ChatController get controller => widget.controller;
+
+  /// Desplaza la pantalla hasta que el encabezado de la entidad quede arriba.
+  void _irAEntidad(EntidadTramites entidad) {
+    final contexto = _secciones[entidad.sigla]?.currentContext;
+    if (contexto == null) return;
+    Scrollable.ensureVisible(
+      contexto,
+      duration: MediaQuery.disableAnimationsOf(context) ? Duration.zero : AppDurations.message,
+      curve: Curves.easeOut,
+    );
+  }
 
   /// Envía la pregunta y abre la conversación.
   ///
@@ -54,7 +76,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
         actions: [
-          ThemeButton(controller: tema),
+          ThemeButton(controller: widget.tema),
           const SizedBox(width: AppSpacing.sm),
         ],
       ),
@@ -101,10 +123,15 @@ class HomeScreen extends StatelessWidget {
                     child: Text('Trámites disponibles', style: text.titleLarge),
                   ),
                   const SizedBox(height: AppSpacing.md),
-                  TramitesList(
-                    tramites: tramitesRapidos,
-                    onSelect: (tramite) => _preguntar(context, tramite.pregunta),
-                  ),
+                  EntityJumpChips(entidades: entidades, onSelect: _irAEntidad),
+                  for (final entidad in entidades) ...[
+                    const SizedBox(height: AppSpacing.xxl),
+                    EntitySection(
+                      key: _secciones[entidad.sigla],
+                      entidad: entidad,
+                      onSelect: (tramite) => _preguntar(context, tramite.pregunta),
+                    ),
+                  ],
                 ],
               ),
             ),

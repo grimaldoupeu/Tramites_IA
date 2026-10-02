@@ -160,7 +160,11 @@ El radio depende de la jerarquía; no se usa el mismo en todo.
 - **Al presionar:** el efecto *ripple* de Material, sin escalados ni rebotes.
 
 ### 6.2 Lista de trámites (Inicio)
-Es **un solo contenedor** blanco con divisores, no seis tarjetas sueltas. Cada fila tiene icono de Material Symbols (redondeado, 24 dp, `primary`), el nombre en `titleMedium`, una línea que explica para qué sirve en `bodyMedium` y un chevron. Mide 64 dp de alto como mínimo y crece si el texto es grande. Se eligió una lista y no una cuadrícula porque nombres como "Suspensión de retenciones de 4ta categoría" se cortarían en dos columnas con letra grande.
+Los trámites se agrupan **por entidad**, en este orden: SUNAT, RENIEC, SUNARP. Las secciones siempre están abiertas (no son plegables), para que nada quede escondido.
+
+- **Chips para saltar:** debajo de "Trámites disponibles" hay un chip por entidad (`ActionChip` con flecha hacia abajo, radio `radiusSm`, borde `outline`, texto `primary`). Al tocarlo, la pantalla se desplaza hasta esa sección (sin animación si se activó "reducir animaciones"). La zona tocable mide 48 dp y el lector de pantalla lo anuncia como "Ir a los trámites de RENIEC".
+- **Encabezado de sección:** la sigla en `titleLarge` color `primary` y, debajo, de qué se encarga la entidad en `bodyMedium` `onSurfaceVariant` (p. ej. "DNI y actas de nacimiento, matrimonio o defunción"), para quien no reconoce la sigla.
+- **Lista de cada entidad:** es **un solo contenedor** blanco con divisores, no tarjetas sueltas. Cada fila tiene icono de Material Symbols (redondeado, 24 dp, `primary`), el nombre en `titleMedium`, una línea que explica para qué sirve en `bodyMedium` y un chevron. Mide 64 dp de alto como mínimo y crece si el texto es grande. Se eligió una lista y no una cuadrícula porque nombres como "Suspensión de retenciones de 4ta categoría" se cortarían en dos columnas con letra grande.
 
 ### 6.3 Conversación
 ```

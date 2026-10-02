@@ -158,6 +158,16 @@ abstract final class AppTheme {
         focusedErrorBorder: inputBorder(scheme.error, 2),
       ),
 
+      // Chips (saltar a una entidad): radio pequeño y borde con significado.
+      chipTheme: ChipThemeData(
+        backgroundColor: scheme.surface,
+        side: BorderSide(color: scheme.outline),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppRadius.sm)),
+        labelStyle: textTheme.labelLarge?.copyWith(color: scheme.primary),
+        iconTheme: IconThemeData(color: scheme.primary, size: 18),
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm, vertical: AppSpacing.sm),
+      ),
+
       dividerTheme: DividerThemeData(
         color: scheme.outlineVariant,
         thickness: 1,
