@@ -54,5 +54,8 @@ def fuentes_unicas(fragmentos: list[Fragmento]) -> list[Fuente]:
     """Una fuente por trámite (varios fragmentos pueden venir del mismo documento)."""
     vistas: dict[str, Fuente] = {}
     for f in fragmentos:
-        vistas.setdefault(f.url_fuente, Fuente(tramite=f.tramite, url=f.url_fuente))
+        vistas.setdefault(
+            f.url_fuente,
+            Fuente(tramite=f.tramite, url=f.url_fuente, fecha_extraccion=f.fecha_extraccion),
+        )
     return list(vistas.values())

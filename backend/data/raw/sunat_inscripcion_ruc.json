@@ -1,5 +1,6 @@
 {
   "entidad": "SUNAT",
   "tramite": "Inscripción en el RUC",
-  "url_fuente": "https://www.gob.pe/284-inscripcion-en-el-ruc"
+  "url_fuente": "https://www.gob.pe/284-inscripcion-en-el-ruc",
+  "fecha_extraccion": "2026-10-02"
 }

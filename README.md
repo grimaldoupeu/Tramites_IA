@@ -154,52 +154,9 @@ La primera vez que se use el modelo de embeddings (~470 MB) se descargará autom
 
 ### 4. Preparar la base de datos en Supabase
 
-En el panel de Supabase, abre **SQL Editor** y ejecuta:
+En el panel de Supabase, abre **SQL Editor** y ejecuta el contenido de [`backend/sql/esquema.sql`](backend/sql/esquema.sql). Crea la extensión pgvector, la tabla `fragmentos` y la función de búsqueda `buscar_fragmentos`.
 
-```sql
--- Habilitar pgvector
-create extension if not exists vector;
-
--- Tabla de fragmentos
-create table if not exists fragmentos (
-    id          bigserial primary key,
-    entidad     text not null,
-    tramite     text not null,
-    contenido   text not null,
-    url_fuente  text not null,
-    embedding   vector(384) not null
-);
-
-create index if not exists fragmentos_url_fuente_idx on fragmentos (url_fuente);
-
--- Seguridad: solo el backend (clave service_role) accede a la tabla
-alter table fragmentos enable row level security;
-
--- Búsqueda por similitud coseno (<=> es la distancia coseno de pgvector)
-create or replace function buscar_fragmentos(
-    query_embedding vector(384),
-    cantidad int default 5
-)
-returns table (
-    entidad     text,
-    tramite     text,
-    contenido   text,
-    url_fuente  text,
-    similitud   float
-)
-language sql stable
-as $$
-    select
-        f.entidad,
-        f.tramite,
-        f.contenido,
-        f.url_fuente,
-        1 - (f.embedding <=> query_embedding) as similitud
-    from fragmentos f
-    order by f.embedding <=> query_embedding
-    limit cantidad;
-$$;
-```
+> Si tu base ya existía de una versión anterior, ejecuta en su lugar las migraciones numeradas de `backend/sql/` (por ejemplo, `001_fecha_extraccion.sql`) y vuelve a ingestar.
 
 ### 5. Configurar las variables de entorno
 
@@ -237,9 +194,12 @@ data/raw/
 {
   "entidad": "SUNAT",
   "tramite": "Inscripción en el RUC",
-  "url_fuente": "https://www.gob.pe/284-inscripcion-en-el-ruc"
+  "url_fuente": "https://www.gob.pe/284-inscripcion-en-el-ruc",
+  "fecha_extraccion": "2026-10-02"
 }
 ```
+
+`fecha_extraccion` es el día en que se copió el texto de la página oficial (formato `AAAA-MM-DD`); la app la muestra junto a cada fuente.
 
 Desde la carpeta `backend/`, con el entorno virtual activado:
 
@@ -313,11 +273,13 @@ curl -X POST http://127.0.0.1:8000/preguntar \
   "fuentes": [
     {
       "tramite": "Inscripción en el RUC",
-      "url": "https://www.gob.pe/284-inscripcion-en-el-ruc"
+      "url": "https://www.gob.pe/284-inscripcion-en-el-ruc",
+      "fecha_extraccion": "2026-10-02"
     },
     {
       "tramite": "Acceder al Nuevo RUS",
-      "url": "https://www.gob.pe/1212-acceder-al-nuevo-rus"
+      "url": "https://www.gob.pe/1212-acceder-al-nuevo-rus",
+      "fecha_extraccion": "2026-10-02"
     }
   ]
 }

@@ -1,6 +1,7 @@
 """Búsqueda vectorial: pregunta -> embedding -> fragmentos más parecidos en Supabase."""
 
 from dataclasses import dataclass
+from datetime import date
 
 from app.db import get_supabase
 from rag.embeddings import embed_pregunta
@@ -14,6 +15,7 @@ class Fragmento:
     tramite: str
     contenido: str
     url_fuente: str
+    fecha_extraccion: date
     similitud: float
 
 
@@ -30,6 +32,7 @@ def buscar_fragmentos(pregunta: str, cantidad: int = CANTIDAD_FRAGMENTOS) -> lis
             tramite=fila["tramite"],
             contenido=fila["contenido"],
             url_fuente=fila["url_fuente"],
+            fecha_extraccion=date.fromisoformat(fila["fecha_extraccion"]),
             similitud=fila["similitud"],
         )
         for fila in respuesta.data

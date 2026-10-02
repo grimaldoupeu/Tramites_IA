@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_tokens.dart';
+import '../../../core/utils/fechas.dart';
 import '../../../data/models/fuente.dart';
 import 'source_ticket_painter.dart';
 
@@ -86,11 +87,14 @@ class _SourceLink extends StatelessWidget {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final text = Theme.of(context).textTheme;
+    final fecha = fuente.fechaExtraccion;
+    // Qué tan reciente es la información: la página oficial pudo cambiar después.
+    final consultada = fecha == null ? null : 'Fuente consultada el ${fechaLarga(fecha)}';
 
     return Semantics(
       link: true,
       label: 'Abrir página oficial: ${fuente.tramite}, en ${fuente.dominio}. '
-          'Se abre en el navegador',
+          '${consultada == null ? '' : '$consultada. '}Se abre en el navegador',
       excludeSemantics: true,
       child: InkWell(
         onTap: onTap,
@@ -117,6 +121,11 @@ class _SourceLink extends StatelessWidget {
                         fuente.dominio,
                         style: text.bodySmall?.copyWith(color: scheme.onSurfaceVariant),
                       ),
+                      if (consultada != null)
+                        Text(
+                          consultada,
+                          style: text.bodySmall?.copyWith(color: scheme.onSurfaceVariant),
+                        ),
                     ],
                   ),
                 ),

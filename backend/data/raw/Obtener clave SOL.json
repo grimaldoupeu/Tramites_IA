@@ -1,5 +1,6 @@
 {
   "entidad": "SUNAT",
   "tramite": "Obtener clave SOL",
-  "url_fuente": "https://www.gob.pe/393-obtener-clave-sol"
+  "url_fuente": "https://www.gob.pe/393-obtener-clave-sol",
+  "fecha_extraccion": "2026-10-02"
 }

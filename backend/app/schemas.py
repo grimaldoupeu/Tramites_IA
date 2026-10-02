@@ -1,5 +1,7 @@
 """Modelos de entrada y salida de la API (validados automáticamente por FastAPI)."""
 
+from datetime import date
+
 from pydantic import BaseModel, Field
 
 
@@ -14,6 +16,8 @@ class PreguntaRequest(BaseModel):
 class Fuente(BaseModel):
     tramite: str
     url: str
+    # Día en que se copió el texto de la página oficial (JSON: "2026-10-02").
+    fecha_extraccion: date
 
 
 class RespuestaResponse(BaseModel):

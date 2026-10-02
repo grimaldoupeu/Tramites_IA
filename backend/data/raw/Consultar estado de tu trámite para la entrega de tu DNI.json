@@ -1,5 +1,6 @@
 {
   "entidad": "RENIEC",
   "tramite": "Consultar estado de tu trámite para la entrega de tu DNI",
-  "url_fuente": "https://www.gob.pe/13388-consultar-estado-de-tu-tramite-para-la-entrega-de-tu-dni"
+  "url_fuente": "https://www.gob.pe/13388-consultar-estado-de-tu-tramite-para-la-entrega-de-tu-dni",
+  "fecha_extraccion": "2026-10-02"
 }

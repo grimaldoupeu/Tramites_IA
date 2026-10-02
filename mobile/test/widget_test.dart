@@ -33,7 +33,12 @@ http.Response jsonResponse(Object cuerpo, int status) => http.Response.bytes(
 http.Response respuestaOk({String texto = respuestaLarga, bool conFuentes = true}) => jsonResponse({
       'respuesta': texto,
       'fuentes': [
-        if (conFuentes) {'tramite': 'Obtener clave SOL', 'url': 'https://www.gob.pe/393-obtener-clave-sol'},
+        if (conFuentes)
+          {
+            'tramite': 'Obtener clave SOL',
+            'url': 'https://www.gob.pe/393-obtener-clave-sol',
+            'fecha_extraccion': '2026-10-02',
+          },
       ],
     }, 200);
 
@@ -150,6 +155,7 @@ void main() {
     expect(find.text('Buscando en fuentes oficiales…'), findsNothing);
     expect(find.text('Respuesta de TramitesIA'), findsOneWidget);
     expect(find.text('Fuente oficial consultada', skipOffstage: false), findsOneWidget);
+    expect(find.text('Fuente consultada el 2 de octubre de 2026', skipOffstage: false), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 

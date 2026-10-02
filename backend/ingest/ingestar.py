@@ -1,7 +1,10 @@
 """Ingesta de documentos: data/raw/ -> fragmentos con embeddings -> tabla "fragmentos".
 
 Cada documento (nombre.txt / .pdf / .html) debe tener al lado un nombre.json con:
-    {"entidad": "...", "tramite": "...", "url_fuente": "..."}
+    {"entidad": "...", "tramite": "...", "url_fuente": "...", "fecha_extraccion": "AAAA-MM-DD"}
+
+fecha_extraccion es el día en que se copió el texto de la página oficial; la app
+la muestra como "Fuente consultada el ..." para que se sepa qué tan reciente es.
 
 Uso (desde la carpeta backend/, con el entorno virtual activado):
     python -m ingest.ingestar            # procesa e inserta en Supabase
@@ -15,6 +18,7 @@ import argparse
 import json
 import sys
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 
 from app.config import BACKEND_DIR
@@ -24,7 +28,7 @@ from rag.embeddings import embed_pasajes
 
 CARPETA_RAW = BACKEND_DIR / "data" / "raw"
 TABLA = "fragmentos"
-CAMPOS_METADATOS = ("entidad", "tramite", "url_fuente")
+CAMPOS_METADATOS = ("entidad", "tramite", "url_fuente", "fecha_extraccion")
 
 
 @dataclass
@@ -32,6 +36,7 @@ class Metadatos:
     entidad: str
     tramite: str
     url_fuente: str
+    fecha_extraccion: str  # ISO 8601, p. ej. "2026-10-02"
 
 
 def leer_metadatos(documento: Path) -> Metadatos:
@@ -49,7 +54,14 @@ def leer_metadatos(documento: Path) -> Metadatos:
     if faltantes:
         raise ValueError(f"{ruta_json.name} no tiene: {', '.join(faltantes)}")
 
-    return Metadatos(**{c: datos[c].strip() for c in CAMPOS_METADATOS})
+    metadatos = Metadatos(**{c: str(datos[c]).strip() for c in CAMPOS_METADATOS})
+    try:
+        date.fromisoformat(metadatos.fecha_extraccion)
+    except ValueError:
+        raise ValueError(
+            f"{ruta_json.name}: fecha_extraccion debe tener el formato AAAA-MM-DD"
+        ) from None
+    return metadatos
 
 
 def buscar_documentos(carpeta: Path) -> list[Path]:
@@ -80,6 +92,7 @@ def procesar_documento(documento: Path, dry_run: bool) -> int:
             "tramite": metadatos.tramite,
             "contenido": contenido,
             "url_fuente": metadatos.url_fuente,
+            "fecha_extraccion": metadatos.fecha_extraccion,
             "embedding": embedding,
         }
         for contenido, embedding in zip(fragmentos, embeddings)

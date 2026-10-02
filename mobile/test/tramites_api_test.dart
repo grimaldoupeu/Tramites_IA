@@ -35,7 +35,11 @@ void main() {
       return json({
         'respuesta': 'Necesitas tu DNI y la dirección de tu domicilio.',
         'fuentes': [
-          {'tramite': 'Inscripción en el RUC', 'url': 'https://www.gob.pe/284-inscripcion-en-el-ruc'},
+          {
+            'tramite': 'Inscripción en el RUC',
+            'url': 'https://www.gob.pe/284-inscripcion-en-el-ruc',
+            'fecha_extraccion': '2026-10-02',
+          },
         ],
       }, 200);
     });
@@ -48,6 +52,17 @@ void main() {
     expect(respuesta.texto, 'Necesitas tu DNI y la dirección de tu domicilio.');
     expect(respuesta.fuentes.single.tramite, 'Inscripción en el RUC');
     expect(respuesta.fuentes.single.dominio, 'gob.pe');
+    expect(respuesta.fuentes.single.fechaExtraccion, DateTime(2026, 10, 2));
+  });
+
+  test('una fuente sin fecha_extraccion se lee igual (la fecha queda vacía)', () async {
+    final api = apiCon((_) async => json({
+          'respuesta': 'Texto.',
+          'fuentes': [
+            {'tramite': 'Obtener clave SOL', 'url': 'https://www.gob.pe/393-obtener-clave-sol'},
+          ],
+        }, 200));
+    expect((await api.preguntar('¿Clave SOL?')).fuentes.single.fechaExtraccion, isNull);
   });
 
   test('sin fuentes cuando no hay información', () async {

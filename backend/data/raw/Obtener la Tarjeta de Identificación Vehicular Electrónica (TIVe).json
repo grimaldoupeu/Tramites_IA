@@ -1,5 +1,6 @@
 {
   "entidad": "SUNARP",
   "tramite": "Obtener la Tarjeta de Identificación Vehicular Electrónica (TIVe)",
-  "url_fuente": "https://www.gob.pe/306-obtener-la-tarjeta-de-identificacion-vehicular-electronica-tive"
+  "url_fuente": "https://www.gob.pe/306-obtener-la-tarjeta-de-identificacion-vehicular-electronica-tive",
+  "fecha_extraccion": "2026-10-02"
 }
