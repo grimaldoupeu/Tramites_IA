@@ -1,0 +1,27 @@
+# Secretos
+.env
+.env.*
+!.env.example
+
+# Entornos virtuales de Python
+venv/
+.venv/
+env/
+
+# Caché de Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Modelos descargados / caché de Hugging Face (si se guarda en el proyecto)
+.cache/
+
+# IDE y sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Flutter (fase 2)
+mobile/.dart_tool/
+mobile/build/

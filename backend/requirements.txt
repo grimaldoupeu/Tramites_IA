@@ -1,0 +1,17 @@
+# --- API web ---
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic-settings>=2.4      # lee la configuración desde variables de entorno / .env
+
+# --- Base de datos ---
+supabase>=2.7               # cliente oficial de Supabase (usa la API REST/RPC)
+
+# --- Embeddings (se ejecutan localmente) ---
+sentence-transformers>=3.0  # carga intfloat/multilingual-e5-small
+
+# --- LLM ---
+google-genai>=1.0           # SDK oficial de la API de Gemini
+
+# --- Extracción de texto para la ingesta ---
+pypdf>=5.0                  # PDF
+beautifulsoup4>=4.12        # HTML
