@@ -1,0 +1,39 @@
+name: tramites_ia
+description: "Asistente de trámites peruanos (TramitesIA)"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.0-327.4.beta
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  http: ^1.6.0          # llamadas al backend (POST /preguntar)
+  url_launcher: ^6.3.3  # abrir las fuentes oficiales en el navegador
+  shared_preferences: ^2.5.5  # recordar el tema elegido al cerrar la app
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Atkinson Hyperlegible va incluida en la app (no se descarga al usarla),
+  # así se ve bien desde el primer uso aunque la conexión sea mala.
+  # Licencia SIL Open Font License: assets/fonts/OFL.txt
+  fonts:
+    - family: AtkinsonHyperlegible
+      fonts:
+        - asset: assets/fonts/AtkinsonHyperlegible-Regular.ttf
+        - asset: assets/fonts/AtkinsonHyperlegible-Italic.ttf
+          style: italic
+        - asset: assets/fonts/AtkinsonHyperlegible-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/AtkinsonHyperlegible-BoldItalic.ttf
+          weight: 700
+          style: italic
