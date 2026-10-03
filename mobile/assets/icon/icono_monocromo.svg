@@ -1,0 +1,12 @@
+<!-- Capa MONOCROMÁTICA para los íconos temáticos de Android 13+.
+     Android solo usa la forma (canal alfa) y la colorea con los tonos del sistema,
+     así que el rombo va como hueco: si se dibujara encima en otro color, desaparecería. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="1024" height="1024">
+  <defs>
+    <mask id="hueco-rombo">
+      <rect width="108" height="108" fill="#fff"/>
+      <polygon points="54,39 66,51 54,63 42,51" fill="#000" stroke="#000" stroke-width="3" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+  <path d="M43 30 H65 A14 14 0 0 1 79 44 V68 A4 4 0 0 1 75 72 H43 A14 14 0 0 1 29 58 V44 A14 14 0 0 1 43 30 Z" fill="#FFFFFF" mask="url(#hueco-rombo)"/>
+</svg>

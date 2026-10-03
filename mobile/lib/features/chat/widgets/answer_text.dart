@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import '../../../core/theme/app_tokens.dart';
 
 /// Muestra el texto de una respuesta con el formato básico que usa el backend:
-/// párrafos, listas numeradas (`1. `), viñetas (`- `), listas anidadas y
-/// negritas (`**texto**`).
+/// títulos (`#`, `##`, `###`), párrafos, listas numeradas (`1. `), viñetas
+/// (`- `), listas anidadas y negritas (`**texto**`).
 ///
 /// Es un intérprete mínimo a propósito: cubre lo que devuelve el modelo sin
 /// agregar un paquete de Markdown completo.
@@ -30,14 +30,11 @@ class AnswerText extends StatelessWidget {
 
     final children = <Widget>[];
     for (final (i, bloque) in bloques.indexed) {
-      if (i > 0) {
-        // Los ítems de una misma lista van más juntos que los párrafos.
-        final mismaLista = bloque is ItemLista && bloques[i - 1] is ItemLista;
-        children.add(SizedBox(height: mismaLista ? AppSpacing.sm : AppSpacing.md));
-      }
+      if (i > 0) children.add(SizedBox(height: _espacioAntes(bloque, bloques[i - 1])));
       children.add(Padding(
         padding: EdgeInsets.only(left: _nivelVisible(bloque.nivel) * sangriaPorNivel),
         child: switch (bloque) {
+          Titulo(:final texto, :final principal) => _Titulo(texto: texto, principal: principal),
           Parrafo(:final texto) => Text.rich(_conNegritas(texto)),
           ItemLista(:final marcador, :final texto) =>
             _Item(marcador: marcador, texto: texto, anchoMarcador: anchoMarcador),
@@ -54,6 +51,36 @@ class AnswerText extends StatelessWidget {
   /// A partir del 4.º nivel ya no se agrega sangría: en un celular quitaría
   /// demasiado ancho al texto, y el modelo casi nunca anida tanto.
   static int _nivelVisible(int nivel) => math.min(nivel, 3);
+
+  /// Un título lleva más aire arriba que abajo, así se ve unido a su contenido.
+  /// Los ítems de una misma lista van más juntos que los párrafos.
+  static double _espacioAntes(Bloque actual, Bloque anterior) {
+    if (actual is Titulo) return AppSpacing.lg;
+    if (anterior is Titulo) return AppSpacing.sm;
+    if (actual is ItemLista && anterior is ItemLista) return AppSpacing.sm;
+    return AppSpacing.md;
+  }
+}
+
+/// Subtítulo dentro de una respuesta, en negrita. Los de `#` y `##` son un poco
+/// más grandes que los de `###`; el lector de pantalla los anuncia como títulos.
+class _Titulo extends StatelessWidget {
+  const _Titulo({required this.texto, required this.principal});
+
+  final String texto;
+  final bool principal;
+
+  @override
+  Widget build(BuildContext context) {
+    final text = Theme.of(context).textTheme;
+    // # y ## -> 22 sp; ### -> 18 sp como el texto, pero en negrita.
+    final estilo = principal ? text.titleLarge : text.titleMedium;
+
+    return Semantics(
+      header: true,
+      child: Text.rich(_conNegritas(texto), style: estilo),
+    );
+  }
 }
 
 /// Ítem de lista con sangría colgante: si el texto ocupa varias líneas, todas
@@ -113,6 +140,15 @@ sealed class Bloque {
   final int nivel;
 }
 
+/// Título markdown (`# `, `## `, `### `...).
+class Titulo extends Bloque {
+  const Titulo(this.texto, {required this.principal});
+  final String texto;
+
+  /// `true` para `#` y `##`; `false` para `###` o más.
+  final bool principal;
+}
+
 class Parrafo extends Bloque {
   const Parrafo(this.texto, {super.nivel});
   final String texto;
@@ -126,6 +162,9 @@ class ItemLista extends Bloque {
   final String texto;
 }
 
+// "#" seguido de un espacio: "#hashtag" no es un título. Se quitan los "#" finales
+// opcionales del estilo "## Título ##".
+final _titulo = RegExp(r'^(#{1,6})\s+(.+?)(?:\s+#+)?$');
 final _numerado = RegExp(r'^(\d+)[.)]\s+(.*)$');
 final _vineta = RegExp(r'^[-*•]\s+(.*)$');
 
@@ -151,10 +190,15 @@ List<Bloque> parsearBloques(String texto) {
       abiertos.removeLast();
     }
 
+    final titulo = _titulo.firstMatch(limpia);
     final numero = _numerado.firstMatch(limpia);
     final vineta = _vineta.firstMatch(limpia);
 
-    if (numero != null || vineta != null) {
+    if (titulo != null) {
+      // Un título siempre va al margen y termina cualquier lista abierta.
+      abiertos.clear();
+      bloques.add(Titulo(titulo.group(2)!, principal: titulo.group(1)!.length <= 2));
+    } else if (numero != null || vineta != null) {
       // Más sangrado que el ítem anterior: empieza una sublista.
       if (abiertos.isEmpty || sangria > abiertos.last) abiertos.add(sangria);
       final nivel = abiertos.length - 1;

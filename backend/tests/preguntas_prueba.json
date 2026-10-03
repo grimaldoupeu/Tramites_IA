@@ -1,0 +1,118 @@
+{
+  "descripcion": "Preguntas de regresión del RAG. Ejecutar con: python -m tests.probar_preguntas (desde backend/). Lo esperado sale de los textos oficiales de data/raw/, no de lo que respondía el sistema.",
+  "formato": {
+    "debe_contener": "Lista de términos que deben aparecer en la respuesta (sin distinguir mayúsculas ni tildes). Si un elemento es una lista, basta con que aparezca una de sus alternativas.",
+    "fuentes_esperadas": "Nombres de trámite que deben venir en 'fuentes', ni más ni menos. Una lista vacía significa que no debe haber fuentes.",
+    "calibracion": "true si la pregunta se usó para elegir MARGEN_RELEVANCIA (0,015). Las demás comprueban que el margen funciona con preguntas nuevas."
+  },
+  "preguntas": [
+    {
+      "id": "reniec-duplicado-modalidades",
+      "entidad": "RENIEC",
+      "caso": "Límite: no debe traer 'Renovar DNI' (queda a 0,018 del mejor) y debe mencionar las 3 modalidades, incluida Módulo.",
+      "calibracion": true,
+      "pregunta": "¿Cuánto cuesta el duplicado de DNI si ya tengo DNI electrónico?",
+      "debe_contener": ["35", "33", "modulo"],
+      "fuentes_esperadas": ["Solicitar duplicado de DNI"]
+    },
+    {
+      "id": "reniec-renovar-no-duplicado",
+      "entidad": "RENIEC",
+      "caso": "Límite inverso: renovar no debe traer el duplicado (queda a 0,038).",
+      "calibracion": true,
+      "pregunta": "¿Cómo renuevo mi DNI si soy mayor de 17 años?",
+      "debe_contener": ["41"],
+      "fuentes_esperadas": ["Renovar DNI para mayores de 17 años"]
+    },
+    {
+      "id": "sunat-ruc-y-clave-sol",
+      "entidad": "SUNAT",
+      "caso": "Límite: pregunta combinada; Clave SOL queda a 0,010 de RUC y deben venir ambas fuentes.",
+      "calibracion": true,
+      "pregunta": "¿Qué necesito para inscribirme en el RUC y sacar mi Clave SOL?",
+      "debe_contener": ["RUC", "Clave SOL"],
+      "fuentes_esperadas": ["Inscripción en el RUC", "Obtener clave SOL"]
+    },
+    {
+      "id": "fuera-de-tema-pasaporte",
+      "entidad": "Ninguna",
+      "caso": "Fuera de tema: no hay documentos de pasaporte; no debe inventar.",
+      "calibracion": true,
+      "pregunta": "¿Cuánto cuesta el pasaporte?",
+      "debe_contener": ["No tengo información"],
+      "fuentes_esperadas": []
+    },
+    {
+      "id": "sunat-nuevo-rus",
+      "entidad": "SUNAT",
+      "caso": "Nueva, en lenguaje cotidiano ('bodega').",
+      "calibracion": false,
+      "pregunta": "Tengo una bodega pequeña, ¿cómo me acojo al Nuevo RUS?",
+      "debe_contener": ["Nuevo RUS"],
+      "fuentes_esperadas": ["Acceder al Nuevo RUS"]
+    },
+    {
+      "id": "sunat-recibo-honorarios",
+      "entidad": "SUNAT",
+      "caso": "Nueva: el trámite se hace con Clave SOL, pero la fuente debe ser solo la del recibo.",
+      "calibracion": false,
+      "pregunta": "Soy independiente, ¿cómo hago mi recibo por honorarios por internet?",
+      "debe_contener": ["Clave SOL"],
+      "fuentes_esperadas": ["Emitir recibo por honorarios electrónico"]
+    },
+    {
+      "id": "reniec-partida-nacimiento",
+      "entidad": "RENIEC",
+      "caso": "Nueva: 'partida de nacimiento' en vez del nombre oficial 'copia certificada de acta'.",
+      "calibracion": false,
+      "pregunta": "Necesito una copia de mi partida de nacimiento, ¿cómo la pido y cuánto cuesta?",
+      "debe_contener": [["12", "10.30", "10,30"]],
+      "fuentes_esperadas": ["Solicitar copia certificada de acta o partida en Reniec"]
+    },
+    {
+      "id": "reniec-estado-dni",
+      "entidad": "RENIEC",
+      "caso": "Nueva: comparte vocabulario con duplicado y renovación ('trámite de DNI'), pero es otro trámite.",
+      "calibracion": false,
+      "pregunta": "Ya hice mi trámite de DNI, ¿cómo sé si ya lo puedo recoger?",
+      "debe_contener": [["100", "estado"]],
+      "fuentes_esperadas": ["Consultar estado de tu trámite para la entrega de tu DNI"]
+    },
+    {
+      "id": "sunarp-boleta-costo",
+      "entidad": "SUNARP",
+      "caso": "Nueva: dice 'carro' en vez de 'vehículo'; no debe traer la consulta vehicular gratuita.",
+      "calibracion": false,
+      "pregunta": "¿Cuánto cuesta pedir la boleta informativa de un carro?",
+      "debe_contener": [["6.10", "6,10"]],
+      "fuentes_esperadas": ["Solicitar boleta informativa vehicular"]
+    },
+    {
+      "id": "sunarp-propiedades",
+      "entidad": "SUNARP",
+      "caso": "Nueva: 'casas o terrenos' en vez de 'predio' o 'propiedad'.",
+      "calibracion": false,
+      "pregunta": "¿Cómo averiguo gratis si tengo casas o terrenos inscritos a mi nombre?",
+      "debe_contener": [["gratis", "gratuit"]],
+      "fuentes_esperadas": ["Consultar los datos de una propiedad - Consulta de Propiedad"]
+    },
+    {
+      "id": "sunarp-tive",
+      "entidad": "SUNARP",
+      "caso": "Nueva: pregunta por la sigla.",
+      "calibracion": false,
+      "pregunta": "¿Qué es la TIVe y cómo la descargo?",
+      "debe_contener": ["descarg"],
+      "fuentes_esperadas": ["Obtener la Tarjeta de Identificación Vehicular Electrónica (TIVe)"]
+    },
+    {
+      "id": "fuera-de-tema-brevete",
+      "entidad": "Ninguna",
+      "caso": "Nueva y fuera de tema, pero cercana a los trámites vehiculares de SUNARP: no debe responder con ellos.",
+      "calibracion": false,
+      "pregunta": "¿Cómo saco mi brevete para manejar?",
+      "debe_contener": ["No tengo información"],
+      "fuentes_esperadas": []
+    }
+  ]
+}

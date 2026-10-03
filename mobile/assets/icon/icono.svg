@@ -1,0 +1,11 @@
+<!-- Ícono de TramitesIA (opción C, "Burbuja"): ícono completo, cuadrado.
+     Lienzo adaptativo de Android de 108 × 108 dp; el viewBox muestra los 72 dp
+     visibles (18..90). Se usa para el ícono clásico y como fuente del PNG.
+     Colores de DESIGN.md: granate #7A1F2B y Papel #F7F6F7. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="18 18 72 72" width="1024" height="1024">
+  <rect x="0" y="0" width="108" height="108" fill="#7A1F2B"/>
+  <!-- La burbuja del chat: esquina inferior derecha casi recta, "apunta" a quien habla -->
+  <path d="M43 30 H65 A14 14 0 0 1 79 44 V68 A4 4 0 0 1 75 72 H43 A14 14 0 0 1 29 58 V44 A14 14 0 0 1 43 30 Z" fill="#F7F6F7"/>
+  <!-- El rombo de la marca; el trazo redondeado suaviza sus puntas -->
+  <polygon points="54,39 66,51 54,63 42,51" fill="#7A1F2B" stroke="#7A1F2B" stroke-width="3" stroke-linejoin="round"/>
+</svg>

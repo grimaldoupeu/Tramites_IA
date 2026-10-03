@@ -19,6 +19,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4  # genera los íconos de Android (solo en desarrollo)
 
 flutter:
   uses-material-design: true
@@ -37,3 +38,17 @@ flutter:
         - asset: assets/fonts/AtkinsonHyperlegible-BoldItalic.ttf
           weight: 700
           style: italic
+
+# Ícono de la app (opción C, "Burbuja"). Fuentes SVG en assets/icon/.
+# Para regenerarlo: dart run flutter_launcher_icons
+flutter_launcher_icons:
+  android: true
+  ios: false  # por ahora solo se publica en Android
+  image_path: "assets/icon/icono.png"  # ícono clásico (Android 7.1 o anterior)
+  # Ícono adaptativo (Android 8+): fondo y primer plano en capas separadas.
+  adaptive_icon_background: "#7A1F2B"  # granate de DESIGN.md
+  adaptive_icon_foreground: "assets/icon/icono_primer_plano.png"
+  # 0: el diseño ya ocupa el lienzo de 108 dp respetando la zona segura de 66 dp.
+  # Con el valor por defecto (16 %) el símbolo saldría reducido.
+  adaptive_icon_foreground_inset: 0
+  adaptive_icon_monochrome: "assets/icon/icono_monocromo.png"  # íconos temáticos, Android 13+

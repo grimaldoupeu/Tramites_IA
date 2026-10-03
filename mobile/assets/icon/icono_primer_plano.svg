@@ -1,0 +1,8 @@
+<!-- Capa de PRIMER PLANO del ícono adaptativo (lienzo completo de 108 × 108 dp,
+     fondo transparente). El fondo granate es una capa aparte (color #7A1F2B).
+     Todo el símbolo queda dentro de la zona segura: círculo de 66 dp centrado
+     (el punto más alejado de la burbuja está a 29,2 dp del centro). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="1024" height="1024">
+  <path d="M43 30 H65 A14 14 0 0 1 79 44 V68 A4 4 0 0 1 75 72 H43 A14 14 0 0 1 29 58 V44 A14 14 0 0 1 43 30 Z" fill="#F7F6F7"/>
+  <polygon points="54,39 66,51 54,63 42,51" fill="#7A1F2B" stroke="#7A1F2B" stroke-width="3" stroke-linejoin="round"/>
+</svg>

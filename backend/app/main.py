@@ -12,7 +12,7 @@ from fastapi import FastAPI
 from app.config import get_settings
 from app.routes import router
 from rag.embeddings import get_modelo
-from rag.generacion import get_cliente_gemini
+from rag.generacion import get_proveedor
 
 
 @asynccontextmanager
@@ -23,7 +23,7 @@ async def lifespan(app: FastAPI):
     pregunta) y la primera respuesta no espera a que cargue el modelo.
     """
     get_settings()
-    get_cliente_gemini()
+    get_proveedor()
     get_modelo()
     yield
 

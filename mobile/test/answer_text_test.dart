@@ -6,7 +6,14 @@ import 'package:tramites_ia/features/chat/widgets/answer_text.dart';
 /// Nivel y texto de cada bloque, para comparar resultados de forma legible.
 List<(int, String)> niveles(String texto) => [
       for (final b in parsearBloques(texto))
-        (b.nivel, switch (b) { Parrafo(:final texto) => texto, ItemLista(:final texto) => texto }),
+        (
+          b.nivel,
+          switch (b) {
+            Titulo(:final texto) => texto,
+            Parrafo(:final texto) => texto,
+            ItemLista(:final texto) => texto,
+          }
+        ),
     ];
 
 const respuestaAnidada = '''
@@ -83,6 +90,39 @@ void main() {
     });
   });
 
+  group('títulos', () {
+    test('#, ## y ### se reconocen como títulos; # y ## son principales', () {
+      final bloques = parsearBloques('# Uno\n## Dos\n### Tres\n#### Cuatro');
+      expect(bloques.map((b) => (b as Titulo).texto), ['Uno', 'Dos', 'Tres', 'Cuatro']);
+      expect(bloques.map((b) => (b as Titulo).principal), [true, true, false, false]);
+    });
+
+    test('un título cierra la lista anterior y va al margen', () {
+      final bloques = parsearBloques('''
+### Requisitos para el RUC
+*   **Modalidad online:**
+    *   DNI y correo.
+### Requisitos para la Clave SOL
+- DNI vigente.''');
+      expect(bloques.map((b) => (b.runtimeType, b.nivel)), [
+        (Titulo, 0),
+        (ItemLista, 0),
+        (ItemLista, 1),
+        (Titulo, 0),
+        (ItemLista, 0), // vuelve al nivel principal después del título
+      ]);
+    });
+
+    test('quita los # finales opcionales y conserva las negritas', () {
+      expect((parsearBloques('## **Costos** ##').single as Titulo).texto, '**Costos**');
+    });
+
+    test('"#hashtag" o "#5" sin espacio no son títulos', () {
+      expect(parsearBloques('#Importante').single, isA<Parrafo>());
+      expect(parsearBloques('#5 en la fila').single, isA<Parrafo>());
+    });
+  });
+
   group('dibujo', () {
     Future<void> montar(WidgetTester tester, {double escala = 1}) async {
       tester.view.physicalSize = const Size(320, 640);
@@ -120,6 +160,34 @@ void main() {
       expect(izquierda(tester, 'Registra tu actividad económica.'), nivel0);
       // La aclaración bajo un paso se alinea con el texto de ese paso.
       expect(izquierda(tester, 'Puedes buscarla en la lista CIIU.'), nivel0);
+    });
+
+    testWidgets('los títulos se muestran sin "#", en negrita y como encabezado', (tester) async {
+      tester.view.physicalSize = const Size(320, 640);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+      final semantica = tester.ensureSemantics();
+
+      await tester.pumpWidget(MaterialApp(
+        theme: AppTheme.light,
+        home: const Scaffold(body: AnswerText('## Costos\n### Por internet\nS/ 35.00')),
+      ));
+
+      expect(find.textContaining('#', findRichText: true), findsNothing);
+      for (final titulo in ['Costos', 'Por internet']) {
+        final widget = tester.widget<RichText>(
+          find.descendant(of: find.byType(Semantics), matching: find.text(titulo, findRichText: true)).first,
+        );
+        expect(widget.text.style?.fontWeight, FontWeight.w700);
+        expect(
+          tester.getSemantics(find.text(titulo, findRichText: true)).flagsCollection.isHeader,
+          isTrue,
+        );
+      }
+      // El de "##" es más grande que el de "###".
+      double tamano(String t) => tester.widget<RichText>(find.text(t, findRichText: true)).text.style!.fontSize!;
+      expect(tamano('Costos'), greaterThan(tamano('Por internet')));
+      semantica.dispose();
     });
 
     testWidgets('sin desbordes con la letra al 200 %', (tester) async {
